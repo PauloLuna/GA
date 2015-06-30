@@ -9,7 +9,8 @@ Scenario: Adicionar uma nova clausula a um contrato
   Then Eu posso checar a nova clausula associada ao contrato
 
 Scenario: Checar clausulas de contratos
-  Given Eu tenho um contrato cadastrado no sistema
+  Given Eu tenha um atleta cadastrado no sistema
+  And Eu tenho um contrato cadastrado no sistema
   And Eu tenha uma clausula associado ao contrato
   And Eu esteja na pagina de contratos
   When Eu clico no link "Show" do primeiro contrato
@@ -28,7 +29,8 @@ Scenario: Clausulas deverão ter titulos unicos
   Then Eu devo ver uma mensagem de erro "Já existe clausula com mesmo título!"
 
 Scenario: Associar uma clausula a um contrato
-  Given Eu tenho um contrato cadastrado no sistema
+  Given Eu tenha um atleta cadastrado no sistema
+  And Eu tenho um contrato cadastrado no sistema
   And Eu tenha uma clausula cadastrada no sistema
   And Eu esteja na pagina de detalhes do contrato
   When Eu clico no link "Adicionar Clausulas"
@@ -38,7 +40,8 @@ Scenario: Associar uma clausula a um contrato
   And Eu devo ver a nova clausula na lista de clausulas
 
 Scenario: Editar clausula
-  Given Eu tenho uma clausula cadastrada no sistema
+  Given Eu tenha um atleta cadastrado no sistema
+  And Eu tenho uma clausula cadastrada no sistema
   And Eu esteja na pagina de clausulas
   When Eu clico no link "Editar"
   Then Eu sou direcionado pagina de editar clausula
@@ -50,7 +53,8 @@ Scenario: Editar clausula
   And Eu posso visualizar nos dados da clausula a descricao "1 Por cento a cada 10 horas de atraso acumuladas"
 
 Scenario: Remover associação de clausula a um contrato
-  Given Eu tenho um contrato cadastrado no sistema
+  Given Eu tenha um atleta cadastrado no sistema
+  And Eu tenho um contrato cadastrado no sistema
   And Eu tenha uma clausula com titulo "Desconto por atrasos" associada ao contrato
   And Eu esteja na página de lista de clausulas do contrato
   When Eu clico no link "Remover" desta clausula

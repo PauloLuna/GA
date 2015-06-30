@@ -34,7 +34,12 @@ end
 
 
 # Checar clausulas de contratos #
-Given /^Eu tenho um contrato cadastrado no sistema$/ do
+Given /^Eu tenha um atleta cadastrado no sistema$/ do
+  @atleta = FactoryGirl.create(:atleta)
+  @atleta.save
+end
+
+And /^Eu tenho um contrato cadastrado no sistema$/ do
   @contrato = FactoryGirl.create(:contrato)
   @contrato.save
 end
@@ -122,7 +127,7 @@ end
 
 
 
-Given(/^Eu tenho uma clausula cadastrada no sistema$/) do
+And(/^Eu tenho uma clausula cadastrada no sistema$/) do
   @clausula = FactoryGirl.create(:clausula)
   @clausula.save
 end

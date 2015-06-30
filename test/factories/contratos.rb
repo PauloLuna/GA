@@ -4,6 +4,7 @@ FactoryGirl.define do
     data_Termino '2016-06-03 19:55:47'
     contrata 'Contrata'
     valor 1500
+    atleta_id 1
   end
 
 end
